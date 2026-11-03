@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | John Lester</title>
+    <link rel="stylesheet" href="login_style.css">
+</head>
+<body>
+
+    <main class="login-container">
+        <section class="login-card">
+
+            <h1 id="formTitle">Sign in</h1>
+
+            <p class="subtitle" id="formSubtitle">
+                Welcome to John Lester's personal website.
+            </p>
+
+            <!-- Login and Register Buttons -->
+            <div class="mode-switch">
+                <button type="button" class="mode-btn active" id="loginMode">
+                    Login
+                </button>
+
+                <button type="button" class="mode-btn" id="signupMode">
+                    Register
+                </button>
+            </div>
+
+            <form id="authForm">
+
+                <!-- Username: Registration Only -->
+                <div class="input-group signup-only hidden">
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        maxlength="80">
+                </div>
+
+                <!-- Username -->
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter your username"
+                        autocomplete="username"
+                        minlength="3"
+                        maxlength="40"
+                        required>
+                </div>
+
+                <!-- Password -->
+                <div class="input-group">
+                    <label for="password">Password</label>
+
+                    <div class="password-box">
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required>
+
+                        <button
+                            type="button"
+                            id="showPassword"
+                            class="show-pass">
+                            Show
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Confirm Password: Registration Only -->
+                <div class="input-group signup-only hidden">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        autocomplete="new-password"
+                        minlength="6">
+                </div>
+
+                <!-- Login Options -->
+                <div class="form-row" id="loginOptions">
+                    <label class="remember">
+                        <input type="checkbox" id="remember">
+                        Remember me
+                    </label>
+
+                    <a href="#" id="forgotPassword">
+                        Forgot password?
+                    </a>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    Login
+                </button>
+
+                <p class="message" id="message" aria-live="polite" role="status"></p>
+
+            </form>
+
+            <!-- Switch Between Login and Registration -->
+            <p class="switch-text" id="switchText">
+                Don't have an account?
+                <button type="button" id="switchBtn">Create one</button>
+            </p>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

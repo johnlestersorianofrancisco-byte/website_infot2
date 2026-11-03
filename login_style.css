@@ -1,0 +1,219 @@
+
+/* GENERAL SETTINGS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black: #070b14;
+    --navy: #111a2b;
+    --blue: #4169ff;
+    --cyan: #00d9ff;
+    --white: #f7f9ff;
+    --muted: #9ba8c0;
+    --line: rgba(255, 255, 255, 0.13);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+    color: var(--white);
+    background: var(--black);
+}
+
+/* LOGIN CONTAINER */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* LOGIN CARD */
+.login-card {
+    width: 100%;
+    padding: 30px;
+    background: var(--navy);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.login-card h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.subtitle {
+    color: var(--muted);
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* LOGIN AND REGISTER BUTTONS */
+.mode-switch {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.mode-btn {
+    flex: 1;
+    padding: 11px;
+    color: var(--muted);
+    background: var(--black);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.mode-btn.active {
+    background: var(--blue);
+    color: white;
+    border-color: var(--blue);
+}
+
+/* INPUT FIELDS */
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    color: white;
+    background: var(--black);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+}
+
+.input-group input:focus {
+    border-color: var(--cyan);
+}
+
+/* PASSWORD FIELD */
+.password-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.password-box input {
+    min-width: 0;
+    flex: 1;
+}
+
+.show-pass {
+    padding: 8px;
+    color: var(--cyan);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* REMEMBER ME AND FORGOT PASSWORD */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0 20px;
+    font-size: 12px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--muted);
+}
+
+.remember input {
+    width: auto;
+}
+
+.form-row a,
+.switch-text button {
+    color: var(--cyan);
+    text-decoration: none;
+}
+
+/* LOGIN BUTTON */
+.submit-btn {
+    width: 100%;
+    padding: 13px;
+    color: white;
+    background: var(--blue);
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit-btn:hover {
+    background: #3157e8;
+}
+
+/* STATUS MESSAGE */
+.message {
+    min-height: 18px;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* REGISTER LINK */
+.switch-text {
+    margin-top: 20px;
+    color: var(--muted);
+    text-align: center;
+    font-size: 13px;
+}
+
+.switch-text button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* HIDDEN REGISTER FIELDS */
+.hidden {
+    display: none !important;
+}
+
+/* MOBILE SCREEN */
+@media (max-width: 400px) {
+    .login-card {
+        padding: 22px 18px;
+    }
+
+    .login-card h1 {
+        font-size: 26px;
+    }
+
+    .form-row {
+        flex-wrap: wrap;
+    }
+}
